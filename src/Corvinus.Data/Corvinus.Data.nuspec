@@ -6,8 +6,8 @@
     <title>Corvinus.Data</title>
     <authors>Biomancer81</authors>
     <owners>Biomancer81</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
+    <licenseUrl>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/Biomancer81/Corvinus</projectUrl>
     <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>Corvinus Data Library.</description>
