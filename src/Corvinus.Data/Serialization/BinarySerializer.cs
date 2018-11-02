@@ -1,4 +1,4 @@
-﻿// <copyright file="BinarySerialization.cs" company="Corvinus Software">
+﻿// <copyright file="BinarySerializer.cs" company="Corvinus Software">
 // Copyright (c) Corvinus Software. All rights reserved.
 // </copyright>
 
@@ -11,13 +11,13 @@ namespace Corvinus.Data.Serialization
     /// <summary>
     /// Provides Methods for easily deserializing objects to binary.
     /// </summary>
-    public class BinarySerialization : IDeserialize, ISerialize
+    public class BinarySerializer : IDeserializeFile, IDeserializeStream, ISerializeFile, ISerializeStream
     {
         /// <summary>Deserializes an object from a binary file.</summary>
         /// <typeparam name="T">Type of object to deserialize.</typeparam>
         /// <param name="path">Source file path.</param>
         /// <returns>Deserialized object.</returns>
-        public T DeserializeFromFile<T>(string path)
+        public T DeserializeFile<T>(string path)
         {
             Stream stream = File.OpenRead(path);
             BinaryFormatter bf = new BinaryFormatter();
@@ -31,7 +31,7 @@ namespace Corvinus.Data.Serialization
         /// <typeparam name="T">Type of object to deserialize.</typeparam>
         /// <param name="input">Input stream.</param>
         /// <returns>Deserialized object.</returns>
-        public T DeserializeFromStream<T>(Stream input)
+        public T DeserializeStream<T>(Stream input)
         {
             BinaryFormatter bf = new BinaryFormatter();
             return (T)bf.Deserialize(input);
@@ -42,7 +42,7 @@ namespace Corvinus.Data.Serialization
         /// <param name="path">Destination file path.</param>
         /// <param name="append">If true and the file exists it will be appended to,
         /// otherwise it will be overwritten.</param>
-        public void SerializeToFile(object input, string path, bool append = false)
+        public void SerializeFile(object input, string path, bool append = false)
         {
             Stream stream = File.Open(path, FileMode.Create);
             BinaryFormatter bf = new BinaryFormatter();
@@ -54,7 +54,7 @@ namespace Corvinus.Data.Serialization
         /// <summary>Serializes an object as binary to a stream. Will not close the stream.</summary>
         /// <param name="input">Object to serialize.</param>
         /// <param name="stream">Output stream.</param>
-        public void SerializeToStream(object input, Stream stream)
+        public void SerializeStream(object input, Stream stream)
         {
             BinaryFormatter bf = new BinaryFormatter();
 

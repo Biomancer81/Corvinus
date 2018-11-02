@@ -1,4 +1,4 @@
-﻿// <copyright file="XmlSerialization.cs" company="Corvinus Software">
+﻿// <copyright file="XmlSerializer.cs" company="Corvinus Software">
 // Copyright (c) Corvinus Software. All rights reserved.
 // </copyright>
 
@@ -13,15 +13,22 @@ namespace Corvinus.Data.Serialization
     /// <summary>
     /// Provides methods for easily serializing and deserializing objects to xml.
     /// </summary>
-    public class XmlSerialization : IDeserialize, IStringDeserialize, ISerialize, IStringSerialize
+    public class XmlSerializer : IDeserializeFile, IDeserializeStream, IDeserializeString, ISerializeFile, ISerializeStream, ISerializeString
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="XmlSerializer"/> class.
+        /// </summary>
+        public XmlSerializer()
+        {
+        }
+
         /// <summary>Deserializes an object from a XML file.</summary>
         /// <typeparam name="T">Type of object to deserialize.</typeparam>
         /// <param name="path">Source file path.</param>
         /// <returns>Deserialized object.</returns>
-        public T DeserializeFromFile<T>(string path)
+        public T DeserializeFile<T>(string path)
         {
-            var serializer = new XmlSerializer(typeof(T));
+            var serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
             using (XmlReader xmlReader = XmlReader.Create(path))
             {
                 return (T)serializer.Deserialize(xmlReader);
@@ -32,9 +39,9 @@ namespace Corvinus.Data.Serialization
         /// <typeparam name="T">Type of object to deserialize.</typeparam>
         /// <param name="input">Input stream.</param>
         /// <returns>Deserialized object.</returns>
-        public T DeserializeFromStream<T>(Stream input)
+        public T DeserializeStream<T>(Stream input)
         {
-            var serializer = new XmlSerializer(typeof(T));
+            var serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
             using (XmlReader xmlReader = XmlReader.Create(input))
             {
                 return (T)serializer.Deserialize(xmlReader);
@@ -45,9 +52,9 @@ namespace Corvinus.Data.Serialization
         /// <typeparam name="T">Type of object to deserialize.</typeparam>
         /// <param name="input">Input string.</param>
         /// <returns>Deserialized object.</returns>
-        public T DeserializeFromString<T>(string input)
+        public T DeserializeString<T>(string input)
         {
-            var serializer = new XmlSerializer(typeof(T));
+            var serializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
             using (XmlReader xmlReader = XmlReader.Create(input))
             {
                 return (T)serializer.Deserialize(xmlReader);
@@ -59,12 +66,12 @@ namespace Corvinus.Data.Serialization
         /// <param name="path">Destination file path.</param>
         /// <param name="append">If true and the file exists it will be appended to,
         /// otherwise it will be overwritten.</param>
-        public void SerializeToFile(object input, string path, bool append = false)
+        public void SerializeFile(object input, string path, bool append = false)
         {
             Type type = input.GetType();
             if (type.IsSerializable)
             {
-                var serializer = new XmlSerializer(type);
+                var serializer = new System.Xml.Serialization.XmlSerializer(type);
                 using (TextWriter xmlWriter = new StreamWriter(path, append))
                 {
                     serializer.Serialize(xmlWriter, input);
@@ -75,12 +82,12 @@ namespace Corvinus.Data.Serialization
         /// <summary>Serializes an object as XML to a stream. Will not close the stream.</summary>
         /// <param name="input">Object to serialize.</param>
         /// <param name="outStream">Output stream.</param>
-        public void SerializeToStream(object input, Stream outStream)
+        public void SerializeStream(object input, Stream outStream)
         {
             Type type = input.GetType();
             if (type.IsSerializable)
             {
-                XmlSerializer serializer = new XmlSerializer(type);
+                System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(type);
                 StreamWriter streamWriter = new StreamWriter(
                     outStream,
                     Encoding.UTF8,
@@ -97,13 +104,13 @@ namespace Corvinus.Data.Serialization
         /// <summary>Serializes an object to a XML string.</summary>
         /// <param name="input">Object to serialize.</param>
         /// <returns>String the object was serialized to.</returns>
-        public string SerializeToString(object input)
+        public string SerializeString(object input)
         {
             Type type = input.GetType();
 
             if (type.IsSerializable)
             {
-                XmlSerializer serializer = new XmlSerializer(type);
+                System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(type);
 
                 using (StringWriter xmlWriter = new StringWriter())
                 {

@@ -56,13 +56,16 @@
     <Compile Include="..\..\shared\CorvinusAssemblyInfo.cs">
       <Link>Properties\CorvinusAssemblyInfo.cs</Link>
     </Compile>
-    <Compile Include="Serialization\BinarySerialization.cs" />
-    <Compile Include="Serialization\ISerialize.cs" />
-    <Compile Include="Serialization\IDeserialize.cs" />
-    <Compile Include="Serialization\IStringDeserialize.cs" />
-    <Compile Include="Serialization\IStringSerialize.cs" />
-    <Compile Include="Serialization\JsonSerialization.cs" />
-    <Compile Include="Serialization\XmlSerialization.cs" />
+    <Compile Include="Serialization\Cloner.cs" />
+    <Compile Include="Serialization\BinarySerializer.cs" />
+    <Compile Include="Serialization\IDeserializeStream.cs" />
+    <Compile Include="Serialization\ISerializeFile.cs" />
+    <Compile Include="Serialization\IDeserializeFile.cs" />
+    <Compile Include="Serialization\ISerializeStream.cs" />
+    <Compile Include="Serialization\IDeserializeString.cs" />
+    <Compile Include="Serialization\ISerializeString.cs" />
+    <Compile Include="Serialization\JsonSerializer.cs" />
+    <Compile Include="Serialization\XmlSerializer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

@@ -7,11 +7,11 @@ namespace Corvinus.Data.Serialization
     /// <summary>
     /// Interface for Serialization to a string.
     /// </summary>
-    public interface IStringSerialize
+    public interface ISerializeString
     {
         /// <summary>Serializes an object to a string.</summary>
         /// <param name="input">Object to serialize.</param>
         /// <returns>String the object was serialized to.</returns>
-        string SerializeToString(object input);
+        string SerializeString(object input);
     }
 }
