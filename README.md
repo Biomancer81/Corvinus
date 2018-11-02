@@ -14,7 +14,7 @@ The Corvinus Framework is working toward creating a variety of libraries to ease
       T DeserializeFromStream<T>(stream input)
       T DeserializeFromString<T>(string input)
       ```
-    1. Corvinus.Data.Serialization.XmlSerialization
+    2. Corvinus.Data.Serialization.XmlSerialization
       ```
       void SerializeToFile(object input, string path, bool append = false)
       void SerializeToStream(object input, Stream stream)
@@ -23,7 +23,7 @@ The Corvinus Framework is working toward creating a variety of libraries to ease
       T DeserializeFromStream<T>(stream input)
       T DeserializeFromString<T>(string input)
       ```
-    1. Corvinus.Data.Serialization.BinarySerialization
+    3. Corvinus.Data.Serialization.BinarySerialization
       ```
       void SerializeToFile(object input, string path, bool append = false)
       void SerializeToStream(object input, Stream stream)
