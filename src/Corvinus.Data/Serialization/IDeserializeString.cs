@@ -1,4 +1,4 @@
-﻿// <copyright file="IStringDeserialize.cs" company="Corvinus Software">
+﻿// <copyright file="IDeserializeString.cs" company="Corvinus Software">
 // Copyright (c) Corvinus Software. All rights reserved.
 // </copyright>
 

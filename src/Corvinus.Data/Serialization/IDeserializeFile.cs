@@ -14,6 +14,5 @@ namespace Corvinus.Data.Serialization
         /// <param name="path">Source file path.</param>
         /// <returns>Deserialized object.</returns>
         T DeserializeFile<T>(string path);
-
     }
 }

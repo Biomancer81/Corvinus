@@ -1,4 +1,8 @@
-﻿namespace Corvinus.Data.Serialization
+﻿// <copyright file="Cloner.cs" company="Corvinus Software">
+// Copyright (c) Corvinus Software. All rights reserved.
+// </copyright>
+
+namespace Corvinus.Data.Serialization
 {
     using System;
     using System.IO;

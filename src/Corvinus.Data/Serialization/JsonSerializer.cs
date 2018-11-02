@@ -1,4 +1,4 @@
-﻿// <copyright file="JsonSerialization.cs" company="Corvinus Software">
+﻿// <copyright file="JsonSerializer.cs" company="Corvinus Software">
 // Copyright (c) Corvinus Software. All rights reserved.
 // </copyright>
 
