@@ -9,7 +9,11 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyDescription("Corvinus Base Library")]
 [assembly: AssemblyProduct("Corvinus Base Library")]
 [assembly: AssemblyVersion("1.0.0.0")]
+#if DEBUG
 [assembly: AssemblyInformationalVersion("1.0.0-dev0")]
+#else
+[assembly: AssemblyInformationalVersion("1.0.0.0")]
+#endif
 [assembly: AssemblyFileVersion("1.0.0.0")]
 [assembly: AssemblyCopyright("Copyright ©  2018")]
 [assembly: AssemblyCulture("")]

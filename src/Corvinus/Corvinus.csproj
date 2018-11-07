@@ -54,6 +54,9 @@
     </AdditionalFiles>
   </ItemGroup>
   <ItemGroup>
+    <None Include="Corvinus.nuspec">
+      <SubType>Designer</SubType>
+    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
