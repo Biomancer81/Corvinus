@@ -8,7 +8,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Corvinus</RootNamespace>
     <AssemblyName>Corvinus</AssemblyName>
-    <TargetFrameworks>netstandard20;net472</TargetFrameworks>
+    <TargetFrameworks>netstandard2.0;net472</TargetFrameworks>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
   </PropertyGroup>
@@ -41,8 +41,14 @@
     <PackageIconUrl>https://github.com/Biomancer81/Corvinus/blob/master/shared/Corvinus-Logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/Biomancer81/Corvinus/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
-    <PackageTags>JSON XML Serialization</PackageTags>
+    <PackageTags>Composition Strong Name Catalog</PackageTags>
     <Version>1.0.0</Version>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard2.0'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net47'">
+    <DefineConstants>NET47;NETFULL</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
     <None Remove="Corvinus.nuspec" />
