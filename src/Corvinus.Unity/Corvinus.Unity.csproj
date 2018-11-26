@@ -1,7 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard2.0</TargetFramework>
+    <TargetFramework>netstandard20</TargetFramework>
     <Authors>Biomancer81</Authors>
     <Company>Biomancer81</Company>
     <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</PackageLicenseUrl>
@@ -11,6 +11,15 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Unity Framework Extensions</PackageTags>
     <Description>A library of Unity Framework Extensions.</Description>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <OutputPath>..\..\lib\$(Configuration)\Corvinus\</OutputPath>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>..\..\lib\$(Configuration)\Corvinus\</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
