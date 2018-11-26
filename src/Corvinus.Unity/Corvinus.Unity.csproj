@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <Authors>Biomancer81</Authors>
+    <Company>Biomancer81</Company>
+    <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/Biomancer81/Corvinus/</PackageProjectUrl>
+    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/blob/master/shared/Corvinus-Logo.png</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Biomancer81/Corvinus/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Unity Framework Extensions</PackageTags>
+    <Description>A library of Unity Framework Extensions.</Description>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\shared\stylecop.json" Link="stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Unity" Version="5.8.11" />
+  </ItemGroup>
+
+</Project>

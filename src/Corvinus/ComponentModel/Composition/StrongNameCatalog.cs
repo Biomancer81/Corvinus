@@ -2,20 +2,17 @@
 // Copyright (c) Corvinus Software. All rights reserved.
 // </copyright>
 
+#if NETFULL
 namespace Corvinus.ComponentModel.Composition
 {
     using System;
     using System.Collections.Generic;
-    using System.ComponentModel.Composition.Hosting;
-    using System.ComponentModel.Composition.Primitives;
     using System.IO;
     using System.Linq;
     using System.Reflection;
 
-    /// <summary>
-    /// StrongNameCatalog Class is a ComposiblePartCatalog that gathers assemblies
-    /// from a path and validates them.
-    /// </summary>
+    /// <summary>StrongNameCatalog Class is a ComposiblePartCatalog that gathers assemblies
+    /// from a path and validates them.</summary>
     public class StrongNameCatalog : ComposablePartCatalog
     {
         private AggregateCatalog aggregateCatalog = new AggregateCatalog();
@@ -87,3 +84,4 @@ namespace Corvinus.ComponentModel.Composition
         }
     }
 }
+#endif

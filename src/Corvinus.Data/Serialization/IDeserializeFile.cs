@@ -4,9 +4,7 @@
 
 namespace Corvinus.Data.Serialization
 {
-    /// <summary>
-    /// Interface for Deserialization from an object.
-    /// </summary>
+    /// <summary>Interface for Deserialization from an object.</summary>
     public interface IDeserializeFile
     {
         /// <summary>Deserializes an object from a file.</summary>

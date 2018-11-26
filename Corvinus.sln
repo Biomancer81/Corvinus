@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2048
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corvinus.Data", "src\Corvinus.Data\Corvinus.Data.csproj", "{956F1DF6-459A-463C-B1C9-5CC2B5904891}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corvinus.Data", "src\Corvinus.Data\Corvinus.Data.csproj", "{956F1DF6-459A-463C-B1C9-5CC2B5904891}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corvinus", "src\Corvinus\Corvinus.csproj", "{6EE2F2EA-9F72-4C51-AB09-EB035348A99D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Corvinus", "src\Corvinus\Corvinus.csproj", "{6EE2F2EA-9F72-4C51-AB09-EB035348A99D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Corvinus.Unity", "src\Corvinus.Unity\Corvinus.Unity.csproj", "{47EF31BA-7CD4-47B0-8E4D-F0CE7FB07ED5}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{6EE2F2EA-9F72-4C51-AB09-EB035348A99D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6EE2F2EA-9F72-4C51-AB09-EB035348A99D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6EE2F2EA-9F72-4C51-AB09-EB035348A99D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{47EF31BA-7CD4-47B0-8E4D-F0CE7FB07ED5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{47EF31BA-7CD4-47B0-8E4D-F0CE7FB07ED5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{47EF31BA-7CD4-47B0-8E4D-F0CE7FB07ED5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{47EF31BA-7CD4-47B0-8E4D-F0CE7FB07ED5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
