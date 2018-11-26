@@ -28,14 +28,15 @@
     <Company>Biomancer81</Company>
     <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Biomancer81/Corvinus</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/blob/master/shared/Corvinus-Logo.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/Biomancer81/Corvinus/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>JSON XML Serialization</PackageTags>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <LangVersion>latest</LangVersion>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Description>Corvinus Data Framework</Description>
+    <Copyright>Copyright 2018 Biomancer81</Copyright>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard20'">
     <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
@@ -43,9 +44,6 @@
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net47'">
     <DefineConstants>NET47;NETFULL</DefineConstants>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Corvinus.Data.nuspec" />
-  </ItemGroup>
   <ItemGroup>
     <Reference Include="Newtonsoft.Json, Version=11.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Newtonsoft.Json.11.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>

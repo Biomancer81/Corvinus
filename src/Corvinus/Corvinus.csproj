@@ -27,14 +27,15 @@
     <Company>Biomancer81</Company>
     <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Biomancer81/Corvinus</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/blob/master/shared/Corvinus-Logo.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/Biomancer81/Corvinus/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Composition Strong Name Catalog</PackageTags>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <LangVersion>latest</LangVersion>
     <Description>Corvinus Base Framework</Description>
+    <Copyright>Copyright 2018 Biomancer81</Copyright>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard20'">
     <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
@@ -42,9 +43,6 @@
   <PropertyGroup Condition=" '$(TargetFramework)' == 'net47'">
     <DefineConstants>NET47;NETFULL</DefineConstants>
   </PropertyGroup>
-  <ItemGroup>
-    <None Remove="Corvinus.nuspec" />
-  </ItemGroup>
   <ItemGroup>
     <Folder Include="Properties\" />
   </ItemGroup>

@@ -6,12 +6,14 @@
     <Company>Biomancer81</Company>
     <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</PackageLicenseUrl>
     <PackageProjectUrl>https://github.com/Biomancer81/Corvinus/</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/blob/master/shared/Corvinus-Logo.png</PackageIconUrl>
+    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/Biomancer81/Corvinus/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Unity Framework Extensions</PackageTags>
     <Description>A library of Unity Framework Extensions.</Description>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.1</Version>
+    <Copyright>Copyright 2018 Biomancer81</Copyright>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
