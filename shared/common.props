@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+ <PropertyGroup Label="Common">
+  <Company>Corvinus Collective</Company>
+  <Authors>Biomancer81</Authors>
+  <Copyright>Copyright © $(Company) 2018. All rights reserved.</Copyright>
+  <NeutralLanguage>en</NeutralLanguage>
+  <DefaultLanguage>en-US</DefaultLanguage>
+  <ProjectBuildExtensionsPath>$(MSBuildThisFileDirectory)</ProjectBuildExtensionsPath>
+  <PackageOutputPath>$(SolutionDir)publish\packages</PackageOutputPath>
+  <OutputPath>$(SolutionDir)publish\bin\$(Configuration)\$(Platform)\$(TargetFramework)\$(AssemblyName)</OutputPath>
+  <LangVersion>latest</LangVersion>
+  <NoWarn>NU5105</NoWarn>
+  <PackageLicense>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</PackageLicense>
+  <PackageProjectUrl>https://github.com/Biomancer81/Corvinus</PackageProjectUrl>
+  <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
+  <RepositoryUrl>https://github.com/Biomancer81/Corvinus/</RepositoryUrl>
+  <RepositoryType>git</RepositoryType>
+ </PropertyGroup>
+</Project>

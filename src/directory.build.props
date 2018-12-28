@@ -1,0 +1,12 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <ImportGroup Condition=" '$(MSBuildProjectExtension)' != '.shproj' ">
+    <Import Project="../shared/common.props" />
+    <Import Project="../shared/code-analysis.props" />
+  </ImportGroup>
+
+  <PropertyGroup>
+   <CodeAnalysisRuleSet>$(MSBuildThisFileDirectory)..\shared\CodeAnalysis.Src.ruleset</CodeAnalysisRuleSet>
+ </PropertyGroup>
+
+</Project>

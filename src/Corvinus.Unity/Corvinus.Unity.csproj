@@ -1,39 +1,23 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
-
   <PropertyGroup>
-    <TargetFramework>netstandard20</TargetFramework>
-    <Authors>Biomancer81</Authors>
-    <Company>Biomancer81</Company>
-    <PackageLicenseUrl>https://github.com/Biomancer81/Corvinus/blob/master/LICENSE</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Biomancer81/Corvinus/</PackageProjectUrl>
-    <PackageIconUrl>https://github.com/Biomancer81/Corvinus/raw/master/shared/Corvinus-Logo.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/Biomancer81/Corvinus/</RepositoryUrl>
-    <RepositoryType>git</RepositoryType>
-    <PackageTags>Unity Framework Extensions</PackageTags>
+    <TargetFrameworks>netstandard20;net472</TargetFrameworks>
+    <Version>1.0.2</Version>
     <Description>A library of Unity Framework Extensions.</Description>
+    <PackageTags>Unity Framework Extensions</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.1</Version>
-    <Copyright>Copyright 2018 Biomancer81</Copyright>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\lib\$(Configuration)\Corvinus\</OutputPath>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard20'">
+    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
   </PropertyGroup>
-
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\lib\$(Configuration)\Corvinus\</OutputPath>
+  <PropertyGroup Condition=" '$(TargetFramework)' == 'net472'">
+    <DefineConstants>NET47;NETFULL</DefineConstants>
   </PropertyGroup>
-
   <ItemGroup>
-    <AdditionalFiles Include="..\..\shared\stylecop.json" Link="stylecop.json" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <PackageReference Include="StyleCop.Analyzers" Version="1.1.0-beta009">
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.1-beta.61">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
     </PackageReference>
-    <PackageReference Include="Unity" Version="5.8.11" />
+    <PackageReference Include="Unity.Abstractions" Version="3.3.1" />
+    <PackageReference Include="Unity.Container" Version="5.8.13" />
   </ItemGroup>
-
 </Project>
