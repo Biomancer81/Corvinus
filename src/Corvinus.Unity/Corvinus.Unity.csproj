@@ -5,12 +5,7 @@
     <Description>A library of Unity Framework Extensions.</Description>
     <PackageTags>Unity Framework Extensions</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'netstandard20'">
-    <DefineConstants>NETCORE;NETSTANDARD;NETSTANDARD2_0</DefineConstants>
-  </PropertyGroup>
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net472'">
-    <DefineConstants>NET47;NETFULL</DefineConstants>
+    <OutputPath>$(SolutionDir)publish\bin\$(Configuration)\$(Platform)\$(TargetFramework)\$(AssemblyName)</OutputPath>
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.1-beta.61">

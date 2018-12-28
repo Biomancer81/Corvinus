@@ -2,11 +2,12 @@
 // Copyright (c) Corvinus Software. All rights reserved.
 // </copyright>
 
-#if NETFULL
 namespace Corvinus.ComponentModel.Composition
 {
     using System;
     using System.Collections.Generic;
+    using System.ComponentModel.Composition.Hosting;
+    using System.ComponentModel.Composition.Primitives;
     using System.IO;
     using System.Linq;
     using System.Reflection;
@@ -84,4 +85,3 @@ namespace Corvinus.ComponentModel.Composition
         }
     }
 }
-#endif
