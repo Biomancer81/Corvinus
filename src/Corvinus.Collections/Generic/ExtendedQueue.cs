@@ -11,7 +11,7 @@ namespace Corvinus.Collections.Generic
     using Corvinus.Collections;
 
     /// <summary>
-    /// Extends <see cref="Queue{T}"/> to add some event handlers.
+    /// Extends a <see cref="Queue{T}"/> that has events to watch Enqueued, Dequeued, and Cleared.
     /// </summary>
     /// <typeparam name="T">Any object that can be added to a collection.</typeparam>
     [DebuggerTypeProxy(typeof(ExtendedQueueDebugView<>))]
