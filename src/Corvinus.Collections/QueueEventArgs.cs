@@ -1,10 +1,16 @@
 ﻿
-namespace Corvinus.Collections.Generic
+namespace Corvinus.Collections
 {
     using System;
 
+    /// <summary>
+    /// QueueEventArgs class.
+    /// </summary>
     public class QueueEventArgs : EventArgs
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QueueEventArgs"/> class.
+        /// </summary>
         public QueueEventArgs()
         {
             IsValid = false;
