@@ -1,0 +1,20 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\..\..\shared\CodeAnalysis.Src.ruleset</CodeAnalysisRuleSet>
+    <SolutionDir Condition="'$(SolutionDir)'==''">$(MSBuildThisFileDirectory)</SolutionDir>
+  </PropertyGroup>
+
+  <ImportGroup Condition=" '$(MSBuildProjectExtension)' != '.shproj' ">
+    <Import Project="shared/common.props" />
+    <Import Project="shared/code-analysis.props" />
+  </ImportGroup>
+	
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.1.1-beta.61">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>
